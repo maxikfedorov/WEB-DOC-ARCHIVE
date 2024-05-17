@@ -11,8 +11,10 @@
         <h1>Загрузка файлов</h1>
         <button id="emptyTrashButton">Опорожнить корзину</button>
         <button id="checkFilesButton">Проверить файлы</button>
+        <label>
+            <input type="checkbox" id="viewToggle"> Сетка
+        </label>
     </header>
-    
     <form id="uploadForm" enctype="multipart/form-data">
         <label for="username">Имя пользователя:</label>
         <input type="text" id="username" name="username" placeholder="Введите имя пользователя">
@@ -22,7 +24,7 @@
         <br>
         <button type="submit">Загрузить</button>
     </form>
-    <div id="fileList"></div>
+    <div id="fileList" class="list-view"></div>
 
     <!-- Модальное окно для подтверждения опорожнения корзины -->
     <div id="emptyTrashModal" class="modal">

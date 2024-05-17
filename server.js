@@ -174,8 +174,8 @@ app.post('/replace', upload.single('file'), (req, res) => {
             id: newId,
             author: oldFileMeta.author, // Подтягиваем автора из старого файла
             filename: req.file.filename,
-            uploadDate: new Date().toISOString(),
-            modifyDate: new Date().toISOString(),
+            uploadDate: oldFileMeta.uploadDate, // Подтягиваем дату создания из старого файла
+            modifyDate: new Date().toISOString(), // Обновляем дату изменения
             extension: path.extname(req.file.filename),
             size: (req.file.size / 1024).toFixed(2) + ' KB',
             state: 'Current',
@@ -193,7 +193,8 @@ app.post('/replace', upload.single('file'), (req, res) => {
     });
 });
 
-// Маршрут для проверки и реанимации файлов
+
+
 // Маршрут для проверки и реанимации файлов
 app.post('/check-files', (req, res) => {
     const metaData = readMetaData();
@@ -204,31 +205,10 @@ app.post('/check-files', (req, res) => {
             return res.status(500).send('Ошибка при чтении директории storage');
         }
 
-        const fileNames = new Set();
-        files.forEach(file => {
-            const fileMeta = metaData.find(meta => meta.filename === file);
-            if (!fileMeta) {
-                // Файл есть в storage, но его метаданные отсутствуют
-                const newId = metaData.length ? metaData[metaData.length - 1].id + 1 : 1;
-                const newFileMeta = {
-                    id: newId,
-                    author: 'guest',
-                    filename: file,
-                    uploadDate: new Date().toISOString(),
-                    modifyDate: new Date().toISOString(),
-                    extension: path.extname(file),
-                    size: (fs.statSync(path.join(storageDir, file)).size / 1024).toFixed(2) + ' KB',
-                    state: 'Current',
-                    relatedFiles: []
-                };
-                metaData.push(newFileMeta);
-            } else {
-                fileNames.add(file);
-            }
-        });
+        const fileNames = new Set(files);
 
         // Проверка на дубликаты в метаданных
-        const duplicates = metaData.filter(file => file.state === 'Current' && fileNames.has(file.filename));
+        const duplicates = metaData.filter(file => file.state === 'Current');
         const uniqueFiles = new Map();
 
         duplicates.forEach(file => {
@@ -245,10 +225,39 @@ app.post('/check-files', (req, res) => {
             }
         });
 
+        // Проверка на наличие файлов в storage
+        metaData.forEach(file => {
+            if (file.state === 'Current' && !fileNames.has(file.filename)) {
+                file.state = 'Deleted';
+                file.modifyDate = new Date().toISOString();
+            }
+        });
+
+        // Реанимация файлов, отсутствующих в метаданных
+        files.forEach(file => {
+            const fileMeta = metaData.find(meta => meta.filename === file);
+            if (!fileMeta) {
+                const newId = metaData.length ? metaData[metaData.length - 1].id + 1 : 1;
+                const newFileMeta = {
+                    id: newId,
+                    author: 'guest',
+                    filename: file,
+                    uploadDate: new Date().toISOString(),
+                    modifyDate: new Date().toISOString(),
+                    extension: path.extname(file),
+                    size: (fs.statSync(path.join(storageDir, file)).size / 1024).toFixed(2) + ' KB',
+                    state: 'Current',
+                    relatedFiles: []
+                };
+                metaData.push(newFileMeta);
+            }
+        });
+
         writeMetaData(metaData);
         res.sendStatus(200);
     });
 });
+
 
 // Маршрут для опорожнения корзины
 app.post('/empty-trash', (req, res) => {

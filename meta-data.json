@@ -17,10 +17,10 @@
     "author": "guest",
     "filename": "ИИ_Лекция 3.pdf",
     "uploadDate": "2024-05-17T01:23:17.242Z",
-    "modifyDate": "2024-05-17T01:23:17.242Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
     "extension": ".pdf",
     "size": "623.37 KB",
-    "state": "Current",
+    "state": "Purged",
     "relatedFiles": []
   },
   {
@@ -28,10 +28,10 @@
     "author": "guest",
     "filename": "CASINO-16bit-NoDit.mp3",
     "uploadDate": "2024-05-17T01:23:25.822Z",
-    "modifyDate": "2024-05-17T01:23:25.822Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
     "extension": ".mp3",
     "size": "3387.75 KB",
-    "state": "Current",
+    "state": "Purged",
     "relatedFiles": [
       1
     ]
@@ -82,12 +82,202 @@
     "author": "MAXIM",
     "filename": "BIG-WIN-FULL.mp3",
     "uploadDate": "2024-05-17T01:24:06.199Z",
-    "modifyDate": "2024-05-17T01:24:06.199Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
     "extension": ".mp3",
     "size": "833.67 KB",
-    "state": "Current",
+    "state": "Purged",
     "relatedFiles": [
       6
     ]
+  },
+  {
+    "id": 8,
+    "author": "admin",
+    "filename": "New MIDI File.mid",
+    "uploadDate": "2024-05-17T10:23:16.735Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mid",
+    "size": "1.28 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      9
+    ]
+  },
+  {
+    "id": 9,
+    "author": "admin",
+    "filename": "BIG-WIN.mp3",
+    "uploadDate": "2024-05-17T10:23:39.373Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "556.12 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": 10,
+    "author": "admin",
+    "filename": "BTN.mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "63.26 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      9,
+      11
+    ]
+  },
+  {
+    "id": 11,
+    "author": "admin",
+    "filename": "BIG-WIN.mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "556.12 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": 12,
+    "author": "admin",
+    "filename": "avatar.jpeg",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".jpeg",
+    "size": "35.50 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      11,
+      13
+    ]
+  },
+  {
+    "id": 13,
+    "author": "admin",
+    "filename": "CASINO.mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "3508.16 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      12,
+      14
+    ]
+  },
+  {
+    "id": 14,
+    "author": "admin",
+    "filename": "CASINO(1).mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "3508.16 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      13,
+      15
+    ]
+  },
+  {
+    "id": 15,
+    "author": "admin",
+    "filename": "CASINO.mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "3508.16 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      14,
+      16
+    ]
+  },
+  {
+    "id": 16,
+    "author": "admin",
+    "filename": "CASINO(1).mp3",
+    "uploadDate": "2024-05-17T10:23:50.462Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".mp3",
+    "size": "3508.16 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      15
+    ]
+  },
+  {
+    "id": 17,
+    "author": "guest",
+    "filename": "avatar.jpeg",
+    "uploadDate": "2024-05-17T10:43:14.727Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".jpeg",
+    "size": "35.50 KB",
+    "state": "Purged",
+    "relatedFiles": []
+  },
+  {
+    "id": 18,
+    "author": "guest",
+    "filename": "ИИ_Лекция 1.pdf",
+    "uploadDate": "2024-05-17T10:43:21.806Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".pdf",
+    "size": "683.31 KB",
+    "state": "Purged",
+    "relatedFiles": []
+  },
+  {
+    "id": 19,
+    "author": "guest",
+    "filename": "ИИ_Лекция 2.pdf",
+    "uploadDate": "2024-05-17T10:43:24.588Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".pdf",
+    "size": "612.87 KB",
+    "state": "Purged",
+    "relatedFiles": []
+  },
+  {
+    "id": 20,
+    "author": "guest",
+    "filename": "ИИ_Лекция 3.pdf",
+    "uploadDate": "2024-05-17T10:43:26.982Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".pdf",
+    "size": "623.37 KB",
+    "state": "Purged",
+    "relatedFiles": []
+  },
+  {
+    "id": 21,
+    "author": "guest",
+    "filename": "ИИ_Лекция 4.pdf",
+    "uploadDate": "2024-05-17T10:43:29.070Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".pdf",
+    "size": "816.74 KB",
+    "state": "Purged",
+    "relatedFiles": []
+  },
+  {
+    "id": 22,
+    "author": "guest",
+    "filename": "Вопросы_к_экзамену_ИИ.pdf",
+    "uploadDate": "2024-05-17T10:47:56.120Z",
+    "modifyDate": "2024-05-17T11:03:03.781Z",
+    "extension": ".pdf",
+    "size": "75.61 KB",
+    "state": "Purged",
+    "relatedFiles": []
   }
 ]

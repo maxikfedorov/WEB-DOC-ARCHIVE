@@ -27,6 +27,26 @@ form {
     align-items: center;
 }
 
+.file-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-name {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-all; /* Перенос длинных имен файлов */
+}
+
+.file-actions {
+    display: flex;
+    gap: 10px;
+    min-width: 200px; /* Фиксированная ширина для блока с кнопками */
+    justify-content: flex-end; /* Выровнять кнопки по правому краю */
+}
+
 label {
     display: block;
     margin-top: 10px;
