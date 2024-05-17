@@ -41,14 +41,17 @@ function displayFile(id, filename) {
     const fileCard = document.createElement('div');
     fileCard.className = 'file-card';
     fileCard.innerHTML = `
-        <p>${filename}</p>
-        <a href="/storage/${filename}" download>Скачать</a>
-        <button class="replace-button" onclick="openReplaceModal('${id}', '${filename}')">Заменить</button>
-        <button class="delete-button" onclick="deleteFile('${id}', '${filename}')">Удалить</button>
-        <button class="metadata-button" onclick="showMetadata('${id}')">Метаданные</button>
+        <p class="file-name">${filename}</p>
+        <div class="file-actions">
+            <a href="/storage/${filename}" download class="download-button">Скачать</a>
+            <button class="replace-button" onclick="openReplaceModal('${id}', '${filename}')">Заменить</button>
+            <button class="delete-button" onclick="deleteFile('${id}', '${filename}')">Удалить</button>
+            <button class="metadata-button" onclick="showMetadata('${id}')">Метаданные</button>
+        </div>
     `;
     fileList.appendChild(fileCard);
 }
+
 
 async function deleteFile(id, filename) {
     const response = await fetch(`/delete/${id}`, {
@@ -217,5 +220,20 @@ window.addEventListener('click', function(event) {
     });
 });
 
-// Загрузка списка файлов при загрузке страницы
-window.onload = loadFiles;
+// Переключение между построчным видом и сеткой
+document.getElementById('viewToggle').addEventListener('change', function(event) {
+    const fileList = document.getElementById('fileList');
+    if (event.target.checked) {
+        fileList.classList.remove('list-view');
+        fileList.classList.add('grid-view');
+    } else {
+        fileList.classList.remove('grid-view');
+        fileList.classList.add('list-view');
+    }
+});
+
+// Установка дефолтного значения флажка "сетка" на неактивное при перезагрузке страницы
+window.onload = function() {
+    document.getElementById('viewToggle').checked = false;
+    loadFiles();
+};

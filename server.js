@@ -193,8 +193,6 @@ app.post('/replace', upload.single('file'), (req, res) => {
     });
 });
 
-
-
 // Маршрут для проверки и реанимации файлов
 app.post('/check-files', (req, res) => {
     const metaData = readMetaData();
@@ -257,7 +255,6 @@ app.post('/check-files', (req, res) => {
         res.sendStatus(200);
     });
 });
-
 
 // Маршрут для опорожнения корзины
 app.post('/empty-trash', (req, res) => {

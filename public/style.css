@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Code New Roman';
+    src: url('../fonts/Code\ New\ Roman.otf') format('truetype'); /* Укажите правильный путь к файлу шрифта */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Code New Roman', sans-serif;
+    margin: 40px;
 }
 
 header {
@@ -23,28 +28,30 @@ form {
     padding: 10px;
     margin-top: 10px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .file-info {
-    flex-grow: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .file-name {
-    flex-grow: 1;
-    margin-right: 10px;
     word-break: break-all; /* Перенос длинных имен файлов */
 }
 
 .file-actions {
+    flex: 0 0 70%;
     display: flex;
-    gap: 10px;
-    min-width: 200px; /* Фиксированная ширина для блока с кнопками */
-    justify-content: flex-end; /* Выровнять кнопки по правому краю */
+    justify-content: space-between;
+    align-items: center;
 }
 
 label {
@@ -143,4 +150,76 @@ button:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Стили для сетки */
+.grid-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-view .file-card {
+    width: calc(33.333% - 10px); /* Три карточки в строке с промежутками */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-view .file-name {
+    margin-bottom: 10px;
+}
+
+.grid-view .file-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца одинаковой ширины */
+    gap: 5px; /* Промежуток между элементами */
+}
+
+
+/* Стили для флажка */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
