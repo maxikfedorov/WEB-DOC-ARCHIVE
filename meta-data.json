@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "author": "guest",
+    "filename": "Karnivool+++.mp3",
+    "uploadDate": "2024-05-17T01:23:17.241Z",
+    "modifyDate": "2024-05-17T01:24:49.794Z",
+    "extension": ".mp3",
+    "size": "5769.39 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      3
+    ]
+  },
+  {
+    "id": 2,
+    "author": "guest",
+    "filename": "ИИ_Лекция 3.pdf",
+    "uploadDate": "2024-05-17T01:23:17.242Z",
+    "modifyDate": "2024-05-17T01:23:17.242Z",
+    "extension": ".pdf",
+    "size": "623.37 KB",
+    "state": "Current",
+    "relatedFiles": []
+  },
+  {
+    "id": 3,
+    "author": "guest",
+    "filename": "CASINO-16bit-NoDit.mp3",
+    "uploadDate": "2024-05-17T01:23:25.822Z",
+    "modifyDate": "2024-05-17T01:23:25.822Z",
+    "extension": ".mp3",
+    "size": "3387.75 KB",
+    "state": "Current",
+    "relatedFiles": [
+      1
+    ]
+  },
+  {
+    "id": 4,
+    "author": "MAXIM",
+    "filename": "ATIMENTS.pdf",
+    "uploadDate": "2024-05-17T01:23:39.606Z",
+    "modifyDate": "2024-05-17T01:24:49.794Z",
+    "extension": ".pdf",
+    "size": "1278.15 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      5
+    ]
+  },
+  {
+    "id": 5,
+    "author": "MAXIM",
+    "filename": "avatar.jpeg",
+    "uploadDate": "2024-05-17T01:23:48.896Z",
+    "modifyDate": "2024-05-17T01:24:49.794Z",
+    "extension": ".jpeg",
+    "size": "35.50 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      4,
+      6
+    ]
+  },
+  {
+    "id": 6,
+    "author": "MAXIM",
+    "filename": "BTN.mp3",
+    "uploadDate": "2024-05-17T01:23:59.855Z",
+    "modifyDate": "2024-05-17T01:24:49.794Z",
+    "extension": ".mp3",
+    "size": "63.26 KB",
+    "state": "Purged",
+    "relatedFiles": [
+      5,
+      7
+    ]
+  },
+  {
+    "id": 7,
+    "author": "MAXIM",
+    "filename": "BIG-WIN-FULL.mp3",
+    "uploadDate": "2024-05-17T01:24:06.199Z",
+    "modifyDate": "2024-05-17T01:24:06.199Z",
+    "extension": ".mp3",
+    "size": "833.67 KB",
+    "state": "Current",
+    "relatedFiles": [
+      6
+    ]
+  }
+]

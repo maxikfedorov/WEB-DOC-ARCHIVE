@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка файлов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Загрузка файлов</h1>
+        <button id="emptyTrashButton">Опорожнить корзину</button>
+        <button id="checkFilesButton">Проверить файлы</button>
+    </header>
+    
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" placeholder="Введите имя пользователя">
+        <br>
+        <label for="fileInput">Выберите файл:</label>
+        <input type="file" id="fileInput" name="file" required>
+        <br>
+        <button type="submit">Загрузить</button>
+    </form>
+    <div id="fileList"></div>
+
+    <!-- Модальное окно для подтверждения опорожнения корзины -->
+    <div id="emptyTrashModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEmptyTrashModal()">&times;</span>
+            <p>Очистить корзину?</p>
+            <button id="confirmEmptyTrash">ДА</button>
+            <button id="cancelEmptyTrash">НЕТ</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для замены файла -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReplaceModal()">&times;</span>
+            <p id="modal-text"></p>
+            <button id="confirm-replace">ДА</button>
+            <button id="cancel-replace">НЕТ</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для метаданных -->
+    <div id="metadataModal" class="modal">
+        <div class="modal-content left-align">
+            <span class="close" onclick="closeMetadataModal()">&times;</span>
+            <h2>Метаданные документа</h2>
+            <pre id="metadataContent"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
